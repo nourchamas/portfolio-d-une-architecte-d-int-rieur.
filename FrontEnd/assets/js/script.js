@@ -1,6 +1,5 @@
 
 
-const imageGallery = document.querySelector(".gallery");
 let dataImage = [];
 let listCategories = [];
 
@@ -10,6 +9,7 @@ const categoriesApiUrl = "http://localhost:5678/api/categories";
 
 // Reset la section projets
 function resetSectionProjets() {
+  const imageGallery = document.querySelector(".gallery");
   imageGallery.innerHTML = "";
 }
 
@@ -23,6 +23,7 @@ fetch(worksApiUrl)
   })
   .then((images) => {
     dataImage = images;
+  
     showWorks(dataImage);
   })
   .catch((error) => {
@@ -47,6 +48,7 @@ fetch(categoriesApiUrl)
 
 // Show works
 function showWorks(images) {
+  const imageGallery = document.querySelector(".gallery");
   resetSectionProjets();
   images.forEach((image) => {
     const figure = document.createElement("figure");
@@ -59,6 +61,7 @@ function showWorks(images) {
     figure.appendChild(figcaption);
     imageGallery.appendChild(figure);
   });
+  
 }
 
 // Filter works by category
@@ -163,34 +166,17 @@ function addProjectToGallery(project) {
 
 
 
-fetch(worksApiUrl)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Erreur de réseau");
-    }
-    return response.json();
-  })
-  .then((works) => {
-    // Faites quelque chose avec les données des travaux récupérées, par exemple :
-    console.log(works);
-  })
-  .catch((error) => {
-    console.error("Erreur lors de la récupération des travaux: " + error);
-  });
-
-
 const token=localStorage.getItem("token");
 console.log(token);
 if (token){
 document.querySelector(".filters").style.display="none";
   document.querySelector(".admin__modifer").style.display="flex";
+  document.getElementById("barre").style.display="flex";
+  document.querySelector(".btnlogin").style.display="none";
  
-}
-           
-
-
-
-document.getElementById('barre').addEventListener('click', function() {
- 
-  this.style.backgroundColor = 'black';}
-);
+  document.querySelector(".btnlogout").style.display="block";
+  document.querySelector(".btnlogout").addEventListener("click",(e)=>{
+   
+    localStorage.removeItem("token");}
+  )};
+  
