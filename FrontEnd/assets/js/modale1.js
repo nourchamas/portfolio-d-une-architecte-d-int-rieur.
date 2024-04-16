@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Sélection de la première modale
-    const premiereModale = document.querySelector('.modale');
+    const premiereModale = document.getElementById('modale1');
 
     // Sélection du bouton pour ouvrir la première modale
-    const ouvrirPremiereModaleBtn = document.querySelector('#modifierBtn');
+    const ouvrirPremiereModaleBtn = document.getElementById('modifierBtn');
 
     // Sélection du bouton pour fermer la première modale
     const fermerPremiereModaleBtn = document.querySelector('.js-modale-close');
 
     // Fonction pour ouvrir la première modale
     function ouvrirPremiereModale() {
-        premiereModale.style.display = 'block'; // Affiche la première modale
+        premiereModale.style.display = 'flex'; // Affiche la première modale
     }
 
     // Fonction pour fermer la première modale

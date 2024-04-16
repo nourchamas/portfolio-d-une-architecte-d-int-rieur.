@@ -1,31 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const modifierBtn = document.querySelector(".js-modale");
-    const modale = document.querySelector("#modale");
-    const closeButton = document.querySelector(".close");
-
-    // Fonction pour ouvrir la modale
-    function openModale() {
-        modale.style.display = "block";
-    }
-
-    // Fonction pour fermer la modale
-    function closeModale() {
-        modale.style.display = "none";
-    }
 
     // Fonction pour fermer la première modale
     function fermerPremiereModale() {
-        deuxiemeModale.style.display = 'none'; // Cache la modale
+        modale1.style.display = 'none'; // Cache la modale
     }
 
     // Événement de clic sur la croix de fermeture
     closeButton.addEventListener("click", function() {
         closeModale();
     });
+addphoto.addEventListener("click",function(){
+fermerPremiereModale();
+openModale();
+
+
+})
+
+
+
+
 
     // Événement de clic en dehors de la modale pour la fermer
     window.addEventListener("click", function(event) {
-        if (event.target === modale) {
+        if (event.target === modale2) {
             closeModale();
         }
     });
@@ -69,4 +65,3 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.error('Erreur lors de l\'ajout du projet:', error);
             });
     });
-});

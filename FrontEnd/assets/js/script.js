@@ -167,7 +167,7 @@ function addProjectToGallery(project) {
 
 
 const token=localStorage.getItem("token");
-console.log(token);
+
 if (token){
 document.querySelector(".filters").style.display="none";
   document.querySelector(".admin__modifer").style.display="flex";

@@ -475,7 +475,6 @@ text-align: center;
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -483,9 +482,14 @@ text-align: center;
 
 	
 	animation: fadeIn 0.2s both;
-
   }
-  
+ #modale1,#modale2{
+display:none;
+
+
+
+ }
+
   .modale-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -624,7 +628,7 @@ text-align: center;
 	transition: all 0.5s ease;
   }
   
-   MODALE AJOUT PROJET */
+   /*MODALE AJOUT PROJET */
   
   .modale-projet {
 	position: fixed;
