@@ -77,39 +77,58 @@
 
 			<div class="gallery">
 
-			
-		</div>
+	
+  </div>
+
+				<button class="delete-work" data-work-id="1">Supprimer le travail</button>
+	
+
+
+
+
 
 			<div id="modale2" class="modale";>
+
+
 				<div class="modale-wrapper">
+
+<!-- add the arrow      -->
+<div class="modal-gallery">
+    <a href="/FrontEnd/index.html" class="previous-modal-button">
+        <i class="fa-solid fa-arrow-left fa-lg" aria-hidden="true"></i>
+    </a>
+</div>
 					<span class="close">&times;</span>
-					<h2>Ajouter un nouveau photo</h2>
+			<h2>Ajout photo</h2>
 					<div class="modal-image-list"></div>
 					<!-- Ajoutez une liste pour afficher les images dans la modale -->
 			
 					<form id="addProjectForm" >
-						<label for="title">Titre du projet:</label>
+
+						<label for="imageUrl"></label>
+						<label for="title">Titre </label>
 						<input type="text" id="title" name="title" required>
-						<label for="imageUrl">URL de l'image:</label>
+						
+						<label for="title">Categorie </label>
 						<input type="text" id="imageUrl" name="imageUrl" required>
-						<button type="submit">Ajouter</button>
+						<button type="submit">Valider</button>
 					</form>
 				</div>
 			</div>
 			<div id="modale1" class="modale">
+
 				<div class="modale-wrapper">
 				  <div class="gallery-view">
 					<!-- Contenu de la vue "Galerie photo" -->
 					<h2>Galerie photo</h2>
 					<div class="gallery">
-					  <!-- Contenu de la galerie photo -->
-					</div>
+
 				  </div>
+					  <!-- Contenu de la galerie photo -->
 				
-					<!-- Contenu de la vue "Ajout photo" (initiallement masquée) -->
-					<h4>Ajouter une photo</h4>
 					
-				 
+					<!--adding ajouter photo button -->
+					<button id="ajouterPhotoBtn" class="btn-open-modale">Ajouter une photo</button>
 				  <div class="js-modale-close">Fermer</div>
 				</div>
 			  </div>

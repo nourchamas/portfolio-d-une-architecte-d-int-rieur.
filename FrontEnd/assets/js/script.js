@@ -101,7 +101,22 @@ showWorks(dataImage);
 
   });
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Fonction pour supprimer un travail
@@ -178,5 +193,11 @@ document.querySelector(".filters").style.display="none";
   document.querySelector(".btnlogout").addEventListener("click",(e)=>{
    
     localStorage.removeItem("token");}
+
+
+
   )};
+ 
   
+  
+ 
